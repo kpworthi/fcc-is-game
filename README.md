@@ -1,6 +1,6 @@
 **freeCodeCamp** - Information Security 5: Secure Real Time Multiplayer Game
 ------
-[![Run on Repl.it](https://repl.it/badge/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game)](https://repl.it/github/freeCodeCamp/boilerplate-project-secure-real-time-multiplayer-game)
+
 ### User stories:
 
 Develop a 2D real time multiplayer game using the HTML Canvas API and [Socket.io](https://socket.io/). The game can be as simple or complex as you like, as long as all the following user stories are implemented:
@@ -24,7 +24,12 @@ Develop a 2D real time multiplayer game using the HTML Canvas API and [Socket.io
 1. Nothing from the website is cached in the client.
 1. The headers say that the site is powered by "PHP 7.4.3" even though it isn't (as a security measure).
 
-### Testing and additional notes
-
-* To run the tests on Repl.it, set NODE_ENV to test without quotes in the .env file.
-* To run the tests in the console, use the command npm run test. To open the Repl.it console, press Ctrl+Shift+P (Cmd if on a Mac) and type "open shell".
+### Additional implementations
+1. Limited to 4 players, additional players are set as 'observers'
+1. Each player has a 'unique' sprite
+1. Sprites rotate based on facing and track last facing on release of keys
+1. Score is displayed, along with the current collectible number
+1. A message is displayed to indicate who collected the most recent item
+1. If a game is running and all players disconnect, the server will reset the game state for a new game
+1. Players have momentum after movement
+1. Players have specific start locations based on their player number

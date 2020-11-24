@@ -61,16 +61,17 @@ suite('Unit Tests', () => {
     });
 
     test("movePlayer(str, num) adjusts a player's position.", done => {
-      // Note: Only testing movement along the x axis in case
-      // the game is a 2D platformer
-      const testPlayer = new Player({ x: 100, y: 100, score: 0, id: Date.now() });
+      // modified test to account for custom positioning.
+      // previous test desc also noted being a 2D platformer
+      // which is not the case for this assignment
+      const testPlayer = new Player({ x: 200, y: 100, score: 0, id: Date.now() });
       testPlayer.movePlayer('right', 5);
       const testPos1 = { x: testPlayer.x, y: testPlayer.y }
-      const expectedPos1 = { x: 105, y: 100 }
+      const expectedPos1 = { x: 205, y: 100 }
 
       testPlayer.movePlayer('left', 10);
       const testPos2 = { x: testPlayer.x, y: testPlayer.y }
-      const expectedPos2 = { x: 95, y: 100 }
+      const expectedPos2 = { x: 195, y: 100 }
 
       assert.deepEqual(testPos1, expectedPos1);
       assert.deepEqual(testPos2, expectedPos2);      
